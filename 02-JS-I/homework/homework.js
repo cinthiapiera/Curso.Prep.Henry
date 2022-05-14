@@ -4,7 +4,7 @@
 const nuevaString = 'Hola mundo';
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = 3;
+const nuevoNum = -3;
 
 // Crea una variable booleana:
 const nuevoBool = true;
@@ -35,14 +35,13 @@ function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  var r = x + y;
-  return r;
+  return x + y;
 }
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  var r = y - x;
+  var r = x - y;
   return r;
 }
 
@@ -66,7 +65,7 @@ function sonIguales(x, y) {
     return true;
   } else
       return false;
-  } 
+}    
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
@@ -86,12 +85,16 @@ function menosQueNoventa(num) {
     return true;
   } else 
       return false;
-  }
+}
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
+  // if (num < 90 ){
+  //  return true;
+  // } else 
+  //    return false;
   return num > 50; 
 }
 
@@ -108,9 +111,8 @@ function esPar(num) {
   // Tu código:
   if (num % 2 === 0){
     return true;
-  } else {
-    return false;
-  }
+  } else 
+      return false;
 }
 
 function esImpar(num) {
@@ -125,15 +127,13 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  var r = num * num;
-  return r;
+  return num * num;
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  var r = num * num * num;
-  return r;
+  return num * num * num;
 }
 
 function elevar(num, exponent) {
@@ -145,19 +145,19 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return 
+  return Math.round(num);
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  return Math.ceil(num);
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+  return Math.random();
 }
 
 function esPositivo(numero) {
@@ -165,13 +165,21 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  
+  if(numero === 0) {
+    return false;
+  }else 
+    if(numero > 0) {
+      return 'Es positivo';
+    }  
+      return 'Es negativo';
 }
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+  var nuevacadena = str + '!'
+  return nuevacadena;
 }
 
 function combinarNombres(nombre, apellido) {
@@ -186,30 +194,30 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'Hola' + nombre + '!';
+  return 'Hola ' + nombre + '!';
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  var a = alto * ancho;
-  return a;
+  var area = alto * ancho;
+  return area;
 }
 
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  var p = lado * 4;
-  return p;
+  var perimetro = lado * 4;
+  return perimetro;
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  var a = (base * altura)/2;
-  return a;
+  var area = (base * altura)/2;
+  return area;
 }
 
 
@@ -227,12 +235,11 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.length>1) return 'Dato erroneo';
+  if (letra.length > 1) return 'Dato incorrecto';
   if(letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u'){
-    return  'es vocal';
-  } else {
+    return  'Es vocal';
+  } else
       return 'Dato incorrecto';
-    } 
 }
 
 
